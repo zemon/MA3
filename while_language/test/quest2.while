@@ -6,7 +6,7 @@ else{ z := x;
       x := y;
       y := 5*10+5
 };
-if x != then z:=300
+if x != 5 then z:=300
 else{ x:=1
 		y:=1
 		z:=1
