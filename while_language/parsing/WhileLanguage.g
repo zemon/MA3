@@ -30,11 +30,19 @@ base_statement returns [Statement value]
     | 'if' c=bool_expr 'then' s1=base_statement
       'else' s2=base_statement                  { $value = new IfStatement(c,s1,s2); }
     | '{' s=statement '}'                       { $value = s; }
+    | 'while' c=bool_expr 'do' s1=base_statement{ $value = new WhileStatement(c,s1); }
+   
     ;
 
 bool_expr returns [BoolExpr value]
+    : e=logical_expr       { $value = e; }
+      ( '||' e=logical_expr { $value = new OrExpr($value,e); } )*
+      
+    ;
+logical_expr returns [BoolExpr value]
     : e=literal       { $value = e; }
       ( '&&' e=literal { $value = new AndExpr($value,e); } )*
+      
     ;
 
 literal returns [BoolExpr value]
@@ -46,6 +54,9 @@ base_bool_expr returns [BoolExpr value]
     : 'true'                             { $value = new BoolValueExpr(true); }
     | 'false'                            { $value = new BoolValueExpr(false); }
     | e1=arith_expr '=' e2=arith_expr  { $value = new EqualsExpr(e1,e2); }
+    // det nye vi tilføjede til opgave 2
+    | e1=arith_expr '!=' e2=arith_expr  { $value = new NotExpr(new EqualsExpr(e1,e2)); }
+    | e1=arith_expr '<=' e2=arith_expr { $value = new LesserOrEqualExpr(e1,e2); }
     ;
 
 arith_expr returns [ArithExpr value]
@@ -67,6 +78,8 @@ base_arith_expr returns [ArithExpr value]
 NUM : '0'..'9'+ ;
 ID  : ('a'..'z'|'A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')* ;
 
-WS  :   (' '|'\t'|'\r'|'\n')+ { $channel = HIDDEN; } ; 
+WS  :   (' '|'\t'|'\r'|'\n')+ { $channel = HIDDEN; } ;
+
+ 
 
 
