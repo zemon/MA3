@@ -25,7 +25,7 @@ public class TS {
 
     }
     // Creates a new state with the given attributes and put them the lists they need to be
-    public void add(int num, boolean init, String label, String transitions){
+    public void add(int num, boolean init, ArrayList<String> label, ArrayList<Integer> transitions){
 
             states.add(new State(num,init,label,transitions));
             if(init){

@@ -26,25 +26,34 @@ transitionSystem returns [ArrayList<State> value]
     ;
  
 state returns [State value]
-    : '{ ' NUM i=initial '[ ' p=prop ' ] ' n=neighbours {$value = new State(Integer.parseInt($NUM.getText()), i, p, n );}
+    : '{' NUM i=initial '[' p=prop ']' n=neighbours {$value = new State(Integer.parseInt($NUM.getText()), i, p, n );}
      | {$value = null;}
     ;
 
 initial returns  [boolean value]
-	: '* ' {$value = true;}
-	| ' ' {$value = false;}
+	: '*' {$value = true;}
+	|  {$value = false;}
 	;
 
-prop returns [ String value]
-	: ' ' {$value = " ";}
-	 |ID {$value = $ID.getText();}
+prop returns [ ArrayList<String> value]
+	:  {$value = new ArrayList<String>(); $value.add("");}
+	 |ap = atomic_propositions{$value = new ArrayList<String>();$value.add(ap);}
+	 (',' ap = atomic_propositions{$value.add(ap);})*
+	;
+atomic_propositions returns [String value]
+:	ID {$value = $ID.getText();}
 	;
 
-neighbours returns [String value]
-	: ' ' {$value=" ";}  
-	|n=((NUM ' ')*) {$value = n.getText();}
+neighbours returns [ArrayList<Integer> value]
+	
+	: n=transitions { $value = new ArrayList<Integer>();$value.add(n);}
+	(  n=transitions { $value.add(n); } )*
 	;
 
+transitions returns [int value]
+:	NUM {$value = Integer.parseInt($NUM.getText());}
+
+	;
 
 
 
@@ -52,4 +61,5 @@ neighbours returns [String value]
 
 
 NUM : '0'..'9'+ ;
-ID	:	 ('a'..'z'|'A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')* ;
+ID  : ('a'..'z'|'A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')* ;
+WS  :   (' '|'\t'|'\r'|'\n')+ { $channel = HIDDEN; } ;

@@ -1,19 +1,20 @@
 package transition_system.ast;
 
+import java.util.ArrayList;
+
 public class State {
     public int id;
     public boolean init;
-    public String[] labels;
-    public int[] transitions;
+    public ArrayList<String> labels;
+    public ArrayList<Integer> transitions;
 
-    public State(int id, boolean init, String labels, String transitions){
+    public State(int id, boolean init, ArrayList<String> labels, ArrayList<Integer> transitions){
         this.id = id;
         this.init = init;
-        System.out.println("LabelOrg: " + labels);
-      
-        this.labels = labelList(labels);
+
+        this.labels = (labels);
         
-        this.transitions = transitionList(transitions);
+        this.transitions=transitions;
 
     }
     
@@ -33,7 +34,7 @@ public class State {
 		   System.out.println("Edge " + string);
 	   }
 	   
-	   int[] intArray = new int[stringArray.length-1];
+	   int[] intArray = new int[stringArray.length];
 	   
 	   for(int i = 0; i < stringArray.length -1 ; i++){
 		   intArray[i] = Integer.parseInt(stringArray[i]);
