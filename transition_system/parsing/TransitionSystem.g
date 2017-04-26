@@ -16,9 +16,23 @@ package transition_system.parsing;
 
 }
 
+
+
 program returns [TS value]
-    : s=transitionSystem EOF { $value = new TS(s); }
+    : s=ctlFormulaes EOF { $value = (s); }
     ;
+
+ctlFormulaes returns [TS value]
+:	s = transitionSystem {$value = new TS(s);}
+	|'ctlTT(' ctl = ctlFormulaes ')' {$value = ctl ;}
+	|'ctlAP(' ctl = ctlFormulaes ',' ID ')' {$value = ctl;$value.ctlAP($ID.getText());}
+	|'ctlEX(' ctl = ctlFormulaes ')' {$value = ctl;$value.ctlEX($value.results);}
+	|'ctlEF(' ctl = ctlFormulaes ')' {$value = ctl;$value.ctlEF($value.results);}
+	|'ctlAX(' ctl = ctlFormulaes ')' {$value = ctl;$value.ctlAX($value.results);}
+	|'ctlAG(' ctl = ctlFormulaes ')' {$value = ctl;$value.ctlAG($value.results);}
+	|'ctlAnd(' ctl1 = ctlFormulaes ',' ctl2 = ctlFormulaes  ')' {$value = ctl;$value.ctlEX($value.results);}
+	|'ctlNot(' ctl = ctlFormulaes ')' {$value = ctl;$value.ctlNot($value.results);}
+	;
 
 transitionSystem returns [ArrayList<State> value]
     : s=state      {$value = new ArrayList<State>(); $value.add(s); }
@@ -46,7 +60,7 @@ atomic_propositions returns [String value]
 
 neighbours returns [ArrayList<Integer> value]
 	
-	: n=transitions { $value = new ArrayList<Integer>();$value.add(n);}
+	: { $value = new ArrayList<Integer>();}
 	(  n=transitions { $value.add(n); } )*
 	;
 

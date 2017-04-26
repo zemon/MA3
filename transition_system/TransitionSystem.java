@@ -25,6 +25,7 @@ public class TransitionSystem {
 //        	Environment env = new Environment();
 //        	transitionSystem.evaluate(env);
         	System.out.println(transitionSystem.toString());
+        	System.out.println("ctl formulae: \n"+transitionSystem.results());
         } catch (Exception e) {
         	System.out.println("Error: " + e);
         }

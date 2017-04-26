@@ -8,11 +8,16 @@ import java.util.ArrayList;
 public class TS {
     ArrayList<State> states;
     ArrayList<State> initStates;
+    public ArrayList<State> results;
 
     public TS(ArrayList<State> states123){
         states = new ArrayList<>();
         initStates = new ArrayList<>();
+        results = new ArrayList<>();
         states = states123;
+        for (State state: states123){
+        	results.add(state);
+        }
        
         for (int i = 0; i < states.size(); i++){
 
@@ -36,15 +41,18 @@ public class TS {
 
     // Returns a list, which is combined of the 2 given lists
     public ArrayList<State> ctlAnd(ArrayList<State> stateList1, ArrayList<State> stateList2){
+    	
         ArrayList<State> list = new ArrayList<>();
         list.addAll(stateList1);
 
         for (State state: stateList2) {
-            if(!list.contains(state)){
+            if(list.contains(state)){
                 list.add(state);
             }
 
         }
+        results = new ArrayList<>();
+        results = list;
         return list;
     }
 
@@ -57,10 +65,13 @@ public class TS {
             }
 
         }
+        results = new ArrayList<>();
+        results = list;
         return list;
     }
     // returns all the states with the given proposition
     public ArrayList<State> ctlAP(String label){
+    	results = new ArrayList<>();
         ArrayList<State> list = new ArrayList<>();
         for (State temp: this.states) {
             for (String prop:temp.labels ) {
@@ -71,11 +82,14 @@ public class TS {
             }
 
         }
+        results = new ArrayList<>();
+        results=list;
         return list;
     }
     // Checks if there is a transition from any state to one of the given states, and return those who has.
     public ArrayList<State> ctlEX(ArrayList<State> tempStates){
         ArrayList<State> list = new ArrayList<>();
+        
         for (State state:this.states             ) {
             for(int transition:state.transitions){
 
@@ -90,7 +104,8 @@ public class TS {
 
 
         }
-
+        results = new ArrayList<>();
+        results = list;
         return list;
     }
     // Returns all states which in any way can go to one of the given states in any number of transitions.
@@ -130,7 +145,8 @@ public class TS {
                 }
             }
         }
-
+        results = new ArrayList<>();
+        results = list;
         return list;
 
     }
@@ -154,7 +170,8 @@ public class TS {
             }
         }
 
-
+        results = new ArrayList<>();
+        results = states;
 
         return states;
     }
@@ -167,6 +184,7 @@ public class TS {
             }
 
         }
+        
 
         return initStates.equals(states);
 
@@ -183,6 +201,18 @@ public class TS {
         }
         return printString;
     }
+    
+    public String results(){
+        String printString = "";
+        for (State state : results) {
+        	if(state!=null){
+            printString = printString + "\n" + state.toString();
+        	}
+
+        }
+        return printString;
+    }
+
 
 
 }

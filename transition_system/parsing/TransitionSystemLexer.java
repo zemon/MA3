@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g 2017-04-26 13:29:02
+// $ANTLR 3.5.1 C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g 2017-04-26 14:52:56
 
 package transition_system.parsing;
 
@@ -18,6 +18,15 @@ public class TransitionSystemLexer extends Lexer {
 	public static final int T__10=10;
 	public static final int T__11=11;
 	public static final int T__12=12;
+	public static final int T__13=13;
+	public static final int T__14=14;
+	public static final int T__15=15;
+	public static final int T__16=16;
+	public static final int T__17=17;
+	public static final int T__18=18;
+	public static final int T__19=19;
+	public static final int T__20=20;
+	public static final int T__21=21;
 	public static final int ID=4;
 	public static final int NUM=5;
 	public static final int WS=6;
@@ -42,10 +51,10 @@ public class TransitionSystemLexer extends Lexer {
 		try {
 			int _type = T__7;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:12:6: ( '*' )
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:12:8: '*'
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:12:6: ( ')' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:12:8: ')'
 			{
-			match('*'); 
+			match(')'); 
 			}
 
 			state.type = _type;
@@ -62,10 +71,10 @@ public class TransitionSystemLexer extends Lexer {
 		try {
 			int _type = T__8;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:13:6: ( ',' )
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:13:8: ','
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:13:6: ( '*' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:13:8: '*'
 			{
-			match(','); 
+			match('*'); 
 			}
 
 			state.type = _type;
@@ -82,10 +91,10 @@ public class TransitionSystemLexer extends Lexer {
 		try {
 			int _type = T__9;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:14:6: ( '[' )
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:14:8: '['
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:14:6: ( ',' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:14:8: ','
 			{
-			match('['); 
+			match(','); 
 			}
 
 			state.type = _type;
@@ -102,10 +111,10 @@ public class TransitionSystemLexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:15:7: ( ']' )
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:15:9: ']'
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:15:7: ( '[' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:15:9: '['
 			{
-			match(']'); 
+			match('['); 
 			}
 
 			state.type = _type;
@@ -122,10 +131,10 @@ public class TransitionSystemLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:16:7: ( '{' )
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:16:9: '{'
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:16:7: ( ']' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:16:9: ']'
 			{
-			match('{'); 
+			match(']'); 
 			}
 
 			state.type = _type;
@@ -142,10 +151,11 @@ public class TransitionSystemLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:17:7: ( '}' )
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:17:9: '}'
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:17:7: ( 'ctlAG(' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:17:9: 'ctlAG('
 			{
-			match('}'); 
+			match("ctlAG("); 
+
 			}
 
 			state.type = _type;
@@ -157,15 +167,202 @@ public class TransitionSystemLexer extends Lexer {
 	}
 	// $ANTLR end "T__12"
 
+	// $ANTLR start "T__13"
+	public final void mT__13() throws RecognitionException {
+		try {
+			int _type = T__13;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:18:7: ( 'ctlAP(' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:18:9: 'ctlAP('
+			{
+			match("ctlAP("); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__13"
+
+	// $ANTLR start "T__14"
+	public final void mT__14() throws RecognitionException {
+		try {
+			int _type = T__14;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:19:7: ( 'ctlAX(' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:19:9: 'ctlAX('
+			{
+			match("ctlAX("); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__14"
+
+	// $ANTLR start "T__15"
+	public final void mT__15() throws RecognitionException {
+		try {
+			int _type = T__15;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:20:7: ( 'ctlAnd(' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:20:9: 'ctlAnd('
+			{
+			match("ctlAnd("); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__15"
+
+	// $ANTLR start "T__16"
+	public final void mT__16() throws RecognitionException {
+		try {
+			int _type = T__16;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:21:7: ( 'ctlEF(' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:21:9: 'ctlEF('
+			{
+			match("ctlEF("); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__16"
+
+	// $ANTLR start "T__17"
+	public final void mT__17() throws RecognitionException {
+		try {
+			int _type = T__17;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:22:7: ( 'ctlEX(' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:22:9: 'ctlEX('
+			{
+			match("ctlEX("); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__17"
+
+	// $ANTLR start "T__18"
+	public final void mT__18() throws RecognitionException {
+		try {
+			int _type = T__18;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:23:7: ( 'ctlNot(' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:23:9: 'ctlNot('
+			{
+			match("ctlNot("); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__18"
+
+	// $ANTLR start "T__19"
+	public final void mT__19() throws RecognitionException {
+		try {
+			int _type = T__19;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:24:7: ( 'ctlTT(' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:24:9: 'ctlTT('
+			{
+			match("ctlTT("); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__19"
+
+	// $ANTLR start "T__20"
+	public final void mT__20() throws RecognitionException {
+		try {
+			int _type = T__20;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:25:7: ( '{' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:25:9: '{'
+			{
+			match('{'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__20"
+
+	// $ANTLR start "T__21"
+	public final void mT__21() throws RecognitionException {
+		try {
+			int _type = T__21;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:26:7: ( '}' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:26:9: '}'
+			{
+			match('}'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__21"
+
 	// $ANTLR start "NUM"
 	public final void mNUM() throws RecognitionException {
 		try {
 			int _type = NUM;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:63:5: ( ( '0' .. '9' )+ )
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:63:7: ( '0' .. '9' )+
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:77:5: ( ( '0' .. '9' )+ )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:77:7: ( '0' .. '9' )+
 			{
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:63:7: ( '0' .. '9' )+
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:77:7: ( '0' .. '9' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -214,8 +411,8 @@ public class TransitionSystemLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:64:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:64:7: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:78:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:78:7: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -225,7 +422,7 @@ public class TransitionSystemLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:64:26: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:78:26: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -270,10 +467,10 @@ public class TransitionSystemLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:65:5: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:65:9: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:79:5: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:79:9: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			{
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:65:9: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:79:9: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -320,37 +517,218 @@ public class TransitionSystemLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:8: ( T__7 | T__8 | T__9 | T__10 | T__11 | T__12 | NUM | ID | WS )
-		int alt4=9;
+		// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:8: ( T__7 | T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | NUM | ID | WS )
+		int alt4=18;
 		switch ( input.LA(1) ) {
-		case '*':
+		case ')':
 			{
 			alt4=1;
 			}
 			break;
-		case ',':
+		case '*':
 			{
 			alt4=2;
 			}
 			break;
-		case '[':
+		case ',':
 			{
 			alt4=3;
 			}
 			break;
-		case ']':
+		case '[':
 			{
 			alt4=4;
 			}
 			break;
-		case '{':
+		case ']':
 			{
 			alt4=5;
 			}
 			break;
+		case 'c':
+			{
+			int LA4_6 = input.LA(2);
+			if ( (LA4_6=='t') ) {
+				int LA4_12 = input.LA(3);
+				if ( (LA4_12=='l') ) {
+					switch ( input.LA(4) ) {
+					case 'A':
+						{
+						switch ( input.LA(5) ) {
+						case 'G':
+							{
+							int LA4_18 = input.LA(6);
+							if ( (LA4_18=='(') ) {
+								alt4=6;
+							}
+
+							else {
+								alt4=17;
+							}
+
+							}
+							break;
+						case 'P':
+							{
+							int LA4_19 = input.LA(6);
+							if ( (LA4_19=='(') ) {
+								alt4=7;
+							}
+
+							else {
+								alt4=17;
+							}
+
+							}
+							break;
+						case 'X':
+							{
+							int LA4_20 = input.LA(6);
+							if ( (LA4_20=='(') ) {
+								alt4=8;
+							}
+
+							else {
+								alt4=17;
+							}
+
+							}
+							break;
+						case 'n':
+							{
+							int LA4_21 = input.LA(6);
+							if ( (LA4_21=='d') ) {
+								int LA4_29 = input.LA(7);
+								if ( (LA4_29=='(') ) {
+									alt4=9;
+								}
+
+								else {
+									alt4=17;
+								}
+
+							}
+
+							else {
+								alt4=17;
+							}
+
+							}
+							break;
+						default:
+							alt4=17;
+						}
+						}
+						break;
+					case 'E':
+						{
+						switch ( input.LA(5) ) {
+						case 'F':
+							{
+							int LA4_22 = input.LA(6);
+							if ( (LA4_22=='(') ) {
+								alt4=10;
+							}
+
+							else {
+								alt4=17;
+							}
+
+							}
+							break;
+						case 'X':
+							{
+							int LA4_23 = input.LA(6);
+							if ( (LA4_23=='(') ) {
+								alt4=11;
+							}
+
+							else {
+								alt4=17;
+							}
+
+							}
+							break;
+						default:
+							alt4=17;
+						}
+						}
+						break;
+					case 'N':
+						{
+						int LA4_16 = input.LA(5);
+						if ( (LA4_16=='o') ) {
+							int LA4_24 = input.LA(6);
+							if ( (LA4_24=='t') ) {
+								int LA4_32 = input.LA(7);
+								if ( (LA4_32=='(') ) {
+									alt4=12;
+								}
+
+								else {
+									alt4=17;
+								}
+
+							}
+
+							else {
+								alt4=17;
+							}
+
+						}
+
+						else {
+							alt4=17;
+						}
+
+						}
+						break;
+					case 'T':
+						{
+						int LA4_17 = input.LA(5);
+						if ( (LA4_17=='T') ) {
+							int LA4_25 = input.LA(6);
+							if ( (LA4_25=='(') ) {
+								alt4=13;
+							}
+
+							else {
+								alt4=17;
+							}
+
+						}
+
+						else {
+							alt4=17;
+						}
+
+						}
+						break;
+					default:
+						alt4=17;
+					}
+				}
+
+				else {
+					alt4=17;
+				}
+
+			}
+
+			else {
+				alt4=17;
+			}
+
+			}
+			break;
+		case '{':
+			{
+			alt4=14;
+			}
+			break;
 		case '}':
 			{
-			alt4=6;
+			alt4=15;
 			}
 			break;
 		case '0':
@@ -364,7 +742,7 @@ public class TransitionSystemLexer extends Lexer {
 		case '8':
 		case '9':
 			{
-			alt4=7;
+			alt4=16;
 			}
 			break;
 		case 'A':
@@ -395,7 +773,6 @@ public class TransitionSystemLexer extends Lexer {
 		case 'Z':
 		case 'a':
 		case 'b':
-		case 'c':
 		case 'd':
 		case 'e':
 		case 'f':
@@ -420,7 +797,7 @@ public class TransitionSystemLexer extends Lexer {
 		case 'y':
 		case 'z':
 			{
-			alt4=8;
+			alt4=17;
 			}
 			break;
 		case '\t':
@@ -428,7 +805,7 @@ public class TransitionSystemLexer extends Lexer {
 		case '\r':
 		case ' ':
 			{
-			alt4=9;
+			alt4=18;
 			}
 			break;
 		default:
@@ -480,21 +857,84 @@ public class TransitionSystemLexer extends Lexer {
 				}
 				break;
 			case 7 :
-				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:43: NUM
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:43: T__13
+				{
+				mT__13(); 
+
+				}
+				break;
+			case 8 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:49: T__14
+				{
+				mT__14(); 
+
+				}
+				break;
+			case 9 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:55: T__15
+				{
+				mT__15(); 
+
+				}
+				break;
+			case 10 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:61: T__16
+				{
+				mT__16(); 
+
+				}
+				break;
+			case 11 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:67: T__17
+				{
+				mT__17(); 
+
+				}
+				break;
+			case 12 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:73: T__18
+				{
+				mT__18(); 
+
+				}
+				break;
+			case 13 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:79: T__19
+				{
+				mT__19(); 
+
+				}
+				break;
+			case 14 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:85: T__20
+				{
+				mT__20(); 
+
+				}
+				break;
+			case 15 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:91: T__21
+				{
+				mT__21(); 
+
+				}
+				break;
+			case 16 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:97: NUM
 				{
 				mNUM(); 
 
 				}
 				break;
-			case 8 :
-				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:47: ID
+			case 17 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:101: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 9 :
-				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:50: WS
+			case 18 :
+				// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:1:104: WS
 				{
 				mWS(); 
 
