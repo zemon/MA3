@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g 2017-04-26 14:52:56
+// $ANTLR 3.5.1 C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g 2017-04-27 15:18:09
 
 package transition_system.parsing;
 
@@ -14,8 +14,8 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class TransitionSystemParser extends Parser {
 	public static final String[] tokenNames = new String[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ID", "NUM", "WS", "')'", "'*'", 
-		"','", "'['", "']'", "'ctlAG('", "'ctlAP('", "'ctlAX('", "'ctlAnd('", 
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ATOM_PROP", "NUM", "WS", "')'", 
+		"'*'", "','", "'['", "']'", "'ctlAG('", "'ctlAP('", "'ctlAX('", "'ctlAnd('", 
 		"'ctlEF('", "'ctlEX('", "'ctlNot('", "'ctlTT('", "'{'", "'}'"
 	};
 	public static final int EOF=-1;
@@ -34,7 +34,7 @@ public class TransitionSystemParser extends Parser {
 	public static final int T__19=19;
 	public static final int T__20=20;
 	public static final int T__21=21;
-	public static final int ID=4;
+	public static final int ATOM_PROP=4;
 	public static final int NUM=5;
 	public static final int WS=6;
 
@@ -93,19 +93,19 @@ public class TransitionSystemParser extends Parser {
 
 
 	// $ANTLR start "ctlFormulaes"
-	// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:25:1: ctlFormulaes returns [TS value] : (s= transitionSystem | 'ctlTT(' ctl= ctlFormulaes ')' | 'ctlAP(' ctl= ctlFormulaes ',' ID ')' | 'ctlEX(' ctl= ctlFormulaes ')' | 'ctlEF(' ctl= ctlFormulaes ')' | 'ctlAX(' ctl= ctlFormulaes ')' | 'ctlAG(' ctl= ctlFormulaes ')' | 'ctlAnd(' ctl1= ctlFormulaes ',' ctl2= ctlFormulaes ')' | 'ctlNot(' ctl= ctlFormulaes ')' );
+	// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:25:1: ctlFormulaes returns [TS value] : (s= transitionSystem | 'ctlTT(' ctl= ctlFormulaes ')' | 'ctlAP(' ctl= ctlFormulaes ',' ATOM_PROP ')' | 'ctlEX(' ctl= ctlFormulaes ')' | 'ctlEF(' ctl= ctlFormulaes ')' | 'ctlAX(' ctl= ctlFormulaes ')' | 'ctlAG(' ctl= ctlFormulaes ')' | 'ctlAnd(' ctl1= ctlFormulaes ',' ctl2= ctlFormulaes ')' | 'ctlNot(' ctl= ctlFormulaes ')' );
 	public final TS ctlFormulaes() throws RecognitionException {
 		TS value = null;
 
 
-		Token ID1=null;
+		Token ATOM_PROP1=null;
 		ArrayList<State> s =null;
 		TS ctl =null;
 		TS ctl1 =null;
 		TS ctl2 =null;
 
 		try {
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:26:3: (s= transitionSystem | 'ctlTT(' ctl= ctlFormulaes ')' | 'ctlAP(' ctl= ctlFormulaes ',' ID ')' | 'ctlEX(' ctl= ctlFormulaes ')' | 'ctlEF(' ctl= ctlFormulaes ')' | 'ctlAX(' ctl= ctlFormulaes ')' | 'ctlAG(' ctl= ctlFormulaes ')' | 'ctlAnd(' ctl1= ctlFormulaes ',' ctl2= ctlFormulaes ')' | 'ctlNot(' ctl= ctlFormulaes ')' )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:26:3: (s= transitionSystem | 'ctlTT(' ctl= ctlFormulaes ')' | 'ctlAP(' ctl= ctlFormulaes ',' ATOM_PROP ')' | 'ctlEX(' ctl= ctlFormulaes ')' | 'ctlEF(' ctl= ctlFormulaes ')' | 'ctlAX(' ctl= ctlFormulaes ')' | 'ctlAG(' ctl= ctlFormulaes ')' | 'ctlAnd(' ctl1= ctlFormulaes ',' ctl2= ctlFormulaes ')' | 'ctlNot(' ctl= ctlFormulaes ')' )
 			int alt1=9;
 			switch ( input.LA(1) ) {
 			case EOF:
@@ -186,7 +186,7 @@ public class TransitionSystemParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:28:3: 'ctlAP(' ctl= ctlFormulaes ',' ID ')'
+					// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:28:3: 'ctlAP(' ctl= ctlFormulaes ',' ATOM_PROP ')'
 					{
 					match(input,13,FOLLOW_13_in_ctlFormulaes96); 
 					pushFollow(FOLLOW_ctlFormulaes_in_ctlFormulaes102);
@@ -194,9 +194,9 @@ public class TransitionSystemParser extends Parser {
 					state._fsp--;
 
 					match(input,9,FOLLOW_9_in_ctlFormulaes104); 
-					ID1=(Token)match(input,ID,FOLLOW_ID_in_ctlFormulaes106); 
+					ATOM_PROP1=(Token)match(input,ATOM_PROP,FOLLOW_ATOM_PROP_in_ctlFormulaes106); 
 					match(input,7,FOLLOW_7_in_ctlFormulaes108); 
-					value = ctl;value.ctlAP(ID1.getText());
+					value = ctl;value.ctlAP(ATOM_PROP1.getText());
 					}
 					break;
 				case 4 :
@@ -493,7 +493,7 @@ public class TransitionSystemParser extends Parser {
 			if ( (LA6_0==11) ) {
 				alt6=1;
 			}
-			else if ( (LA6_0==ID) ) {
+			else if ( (LA6_0==ATOM_PROP) ) {
 				alt6=2;
 			}
 
@@ -564,19 +564,19 @@ public class TransitionSystemParser extends Parser {
 
 
 	// $ANTLR start "atomic_propositions"
-	// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:57:1: atomic_propositions returns [String value] : ID ;
+	// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:57:1: atomic_propositions returns [String value] : ATOM_PROP ;
 	public final String atomic_propositions() throws RecognitionException {
 		String value = null;
 
 
-		Token ID3=null;
+		Token ATOM_PROP3=null;
 
 		try {
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:58:3: ( ID )
-			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:58:3: ID
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:58:3: ( ATOM_PROP )
+			// C:\\Users\\Simon\\Documents\\projectbase\\MA3\\transition_system\\parsing\\TransitionSystem.g:58:3: ATOM_PROP
 			{
-			ID3=(Token)match(input,ID,FOLLOW_ID_in_atomic_propositions380); 
-			value = ID3.getText();
+			ATOM_PROP3=(Token)match(input,ATOM_PROP,FOLLOW_ATOM_PROP_in_atomic_propositions380); 
+			value = ATOM_PROP3	.getText();
 			}
 
 		}
@@ -689,7 +689,7 @@ public class TransitionSystemParser extends Parser {
 	public static final BitSet FOLLOW_13_in_ctlFormulaes96 = new BitSet(new long[]{0x00000000003FF000L});
 	public static final BitSet FOLLOW_ctlFormulaes_in_ctlFormulaes102 = new BitSet(new long[]{0x0000000000000200L});
 	public static final BitSet FOLLOW_9_in_ctlFormulaes104 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_ID_in_ctlFormulaes106 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_ATOM_PROP_in_ctlFormulaes106 = new BitSet(new long[]{0x0000000000000080L});
 	public static final BitSet FOLLOW_7_in_ctlFormulaes108 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_17_in_ctlFormulaes114 = new BitSet(new long[]{0x00000000003FF000L});
 	public static final BitSet FOLLOW_ctlFormulaes_in_ctlFormulaes120 = new BitSet(new long[]{0x0000000000000080L});
@@ -725,7 +725,7 @@ public class TransitionSystemParser extends Parser {
 	public static final BitSet FOLLOW_atomic_propositions_in_prop352 = new BitSet(new long[]{0x0000000000000202L});
 	public static final BitSet FOLLOW_9_in_prop358 = new BitSet(new long[]{0x0000000000000010L});
 	public static final BitSet FOLLOW_atomic_propositions_in_prop364 = new BitSet(new long[]{0x0000000000000202L});
-	public static final BitSet FOLLOW_ID_in_atomic_propositions380 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ATOM_PROP_in_atomic_propositions380 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_transitions_in_neighbours407 = new BitSet(new long[]{0x0000000000000022L});
 	public static final BitSet FOLLOW_NUM_in_transitions426 = new BitSet(new long[]{0x0000000000000002L});
 }

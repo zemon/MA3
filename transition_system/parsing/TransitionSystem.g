@@ -25,7 +25,7 @@ program returns [TS value]
 ctlFormulaes returns [TS value]
 :	s = transitionSystem {$value = new TS(s);}
 	|'ctlTT(' ctl = ctlFormulaes ')' {$value = ctl ;}
-	|'ctlAP(' ctl = ctlFormulaes ',' ID ')' {$value = ctl;$value.ctlAP($ID.getText());}
+	|'ctlAP(' ctl = ctlFormulaes ',' ATOM_PROP ')' {$value = ctl;$value.ctlAP($ATOM_PROP.getText());}
 	|'ctlEX(' ctl = ctlFormulaes ')' {$value = ctl;$value.ctlEX($value.results);}
 	|'ctlEF(' ctl = ctlFormulaes ')' {$value = ctl;$value.ctlEF($value.results);}
 	|'ctlAX(' ctl = ctlFormulaes ')' {$value = ctl;$value.ctlAX($value.results);}
@@ -55,7 +55,7 @@ prop returns [ ArrayList<String> value]
 	 (',' ap = atomic_propositions{$value.add(ap);})*
 	;
 atomic_propositions returns [String value]
-:	ID {$value = $ID.getText();}
+:	ATOM_PROP {$value = $ATOM_PROP	.getText();}
 	;
 
 neighbours returns [ArrayList<Integer> value]
@@ -75,5 +75,6 @@ transitions returns [int value]
 
 
 NUM : '0'..'9'+ ;
-ID  : ('a'..'z'|'A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')* ;
+ATOM_PROP  
+	:	 ('a'..'z')* ;
 WS  :   (' '|'\t'|'\r'|'\n')+ { $channel = HIDDEN; } ;
