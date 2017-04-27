@@ -1,5 +1,5 @@
 x:=5;
-y=10;
+y:=10;
 z:= 3;
 if x <= y then x:=0
 else{ z := x;
@@ -7,7 +7,7 @@ else{ z := x;
       y := 5*10+5
 };
 if x != 5 then z:=300
-else{ x:=1
-		y:=1
+else{ x:=1;
+		y:=1;
 		z:=1
-};
+}
